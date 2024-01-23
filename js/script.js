@@ -1,9 +1,15 @@
 var button = document.querySelector(".show-cat");
-console.log("button");
+// console.log("button");
 var cat = document.querySelector(".cat")
-console.log("cat");
+// console.log("cat");
 
 button.addEventListener("click", function(){
-  // console.log("Its working!");
-  cat.classList.add("show")
-})
+  // cat.classList.add("show")
+  if (cat.classList.contains("show")){
+cat.classList.remove("show")
+button.classList.add("disappear")
+  }else {
+    cat.classList.add("show")
+    button.classList.remove("disappear")
+  }
+});
